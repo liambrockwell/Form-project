@@ -1,5 +1,5 @@
 document.querySelector('form').addEventListener('submit', function(e){
- e.preventDefault()
+e.preventDefault()
 })
 
 
@@ -11,19 +11,17 @@ document.querySelector('form').addEventListener('submit', function(e){
        
     }
 }
-const logIn = (userEm) =>{
-    if(userEm != user.email){
-        console.log('go away');
-    } else{
-        console.log('hiiii');
-    }
- }
+
 
  const formVal = () => {
-   form = document.querySelector('form')
-   usrEmail = form.elements[0];
-   usrEmailInp = 'liam@23com';
-   return usrEmailInp
+   const form = document.forms['myForm']['emailAd'].value
+   
+   if (form  !== user.email) {
+       console.log('you failed')
+       return false;
+   } else{
+       console.log('welcome')
+   }
  }
- logIn(formVal())
+ document.querySelector('form').addEventListener('submit', formVal)
 //user.myFunc()

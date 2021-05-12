@@ -7,6 +7,7 @@
     <title>form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </head>
 <body>
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
@@ -58,17 +59,17 @@
                         <p class="subtitle">
                             sign in to explore
                         </p>
-                        <form>
+                        <form id="signIn" name="myForm">
                             <div class="field">
                                 <label class="label">Enter email</label>
-                                <input class="input is-rounded" type="email" placeholder="Enter email">
+                                <input class="input is-rounded" type="email" placeholder="Enter email" name="emailAd">
                             </div> 
                             <div class="field">
                                 <label class="label">Enter password</label>
                                 <input type="password" class="input is-rounded">
                             </div>
                             <div class="field is-flex is-justify-content-center">
-                                <input type="submit" class="button" value="sign-in" id="signIn">
+                                <input type="submit" class="button" value="sign-in" id="submit">
                             </div>
                             <footer class="card-footer ">
                                 <button class="button is-medium is-fullwidth">register</button>
@@ -80,7 +81,7 @@
            <div class="column"></div>
         </div>
     </section>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>
