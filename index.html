@@ -11,30 +11,26 @@
 </head>
 <body>
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <ion-icon name="bonfire"></ion-icon>
-            <span class="ml-2">venture</span>
-          </a>
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Home
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="navbar-item">
+                    <ion-icon name="bonfire"></ion-icon>
+                    <span class="ml-2">venture</span>
                 </a>
-                <a class="navbar-item">
-                    Home
-                </a>
+                <span class="navbar-burger burger" data-target="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </div>
-            <div class="navbar-end">
-                <a class="navbar-item">
-                    home
-                </a>
+            <div class="navbar-menu" id="navMenu">
+               <div class="navbar-end">
+                   <a href="#" class="navbar-item is-active">home</a>
+                   <a href="#" class="navbar-item">prices</a>
+                   <a href="#" class="navbar-item">Places</a>
+                   <a href="#" class="navbar-item">Events</a>
+                   <a href="#" class="navbar-item">Shop</a>
+               </div>
             </div>
         </div>
     </nav>
@@ -83,5 +79,6 @@
     </section>
     
     <script src="script.js"></script>
+    
 </body>
 </html>
