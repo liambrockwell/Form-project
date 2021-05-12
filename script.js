@@ -14,13 +14,14 @@ e.preventDefault()
 
 
  const formVal = () => {
-   const form = document.forms['myForm']['emailAd'].value
-   
-   if (form  !== user.email) {
-       console.log('you failed')
-       return false;
+   const email = document.forms['myForm']['emailAd'].value
+   const password = document.forms['myForm']['passVal'].value
+
+   if (email === user.email && password === user.password) {
+       console.log('well done')
+       return true;
    } else{
-       console.log('welcome')
+       console.log('fail')
    }
  }
  document.querySelector('form').addEventListener('submit', formVal)
