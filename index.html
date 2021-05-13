@@ -34,11 +34,11 @@
             </div>
         </div>
     </nav>
-    <section class="section is-medium">
-        <div class="columns">
-            <div class="column"></div>
-            <div class="column is-half">
-                <div class="card mt-4">
+    <section class="section is-medium ">
+        <div class="columns is-mobile">
+            <div class="column is-hidden-mobile"></div>
+            <div class="column is-half is-three-quarters-mobile" id="card">
+                <div class="card mt-1">
                     <header class="card-header">
                         <p class="card-header-title">
                             Already registerd
@@ -64,16 +64,16 @@
                                 <input type="password" class="input is-rounded" name="passVal">
                             </div>
                             <div class="field is-flex is-justify-content-center">
-                                <input type="submit" class="button is-primary" value="sign-in" id="submit">
+                                <input type="submit" class="button is-rounded is-fullwidth" value="sign-in" id="submit">
                             </div>
                             <footer class="card-footer ">
-                                <button class="button is-medium is-fullwidth">register</button>
+                                <button class="button  is-fullwidth is-rounded mt-3">register</button>
                             </footer>
                         </form>
                     </div>
                 </div>
             </div>
-           <div class="column"></div>
+           <div class="column is-hidden-mobile"></div>
         </div>
     </section>
     <script src="script.js"></script>
