@@ -34,6 +34,7 @@ e.preventDefault()
        return true;
    } else{
        console.log('fail')
+       return false;
    }
  }
  document.querySelector('form').addEventListener('submit', formVal)

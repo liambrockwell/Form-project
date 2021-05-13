@@ -1,3 +1,8 @@
+section {
+  height: 100vh;
+  background-color: #f1faee;
+}
+
 #formContainer {
   margin-top: 2rem;
 }
