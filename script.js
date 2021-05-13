@@ -10,10 +10,6 @@ const nav =() => {
 };
 nav()
 
-
-
-
-
  user = {
     email:'liam@23com',
     password:'liam',
@@ -22,33 +18,32 @@ nav()
     }
 }
 // display text when email = wrong
-const emailFail = () =>  {
-    const email = document.forms['myForm']['emailAd'];
-    email.classList.add('me');
-    email.value = 'We do not recognise this email';
+const createAlertEm = () =>{
+   const alertTextEm = document.querySelector('.alertTextEm');
+   alertTextEm.style.display = 'block';
     
-    if(email.value ='We do not recognise this email' ){
-    email.addEventListener('click',function(){
-      document.forms['myForm'].reset();
-    })};
-    
-}
+};
+// display text when password = wrong
+const createAlertP = () =>{
+    const alertTextP = document.querySelector('.alertTextP');
+    alertTextP.style.display = 'block';
+ }
 
  const formVal = (e) => {
    const email = document.forms['myForm']['emailAd']
    const password = document.forms['myForm']['passVal']
 
    if (email.value !== user.email && password.value !== user.password) {
-       e.preventDefault()
-       emailFail()
+       e.preventDefault();
+      
    } 
    else if(email.value !== user.email && password.value === user.password){
-       e.preventDefault()
-       emailFail()
+       e.preventDefault();
+       createAlertEm();
    }
    else if(email.value === user.email && password.value !== user.password){
-    e.preventDefault()
-    alert('correct email wrong password')
+    e.preventDefault();
+    createAlertP();
    }
  }
  document.querySelector('form').addEventListener('submit', formVal)

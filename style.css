@@ -16,6 +16,18 @@ section {
   text-align: center;
 }
 
+.alertTextEm {
+  text-align: center;
+  color: #ea1601;
+  display: none;
+}
+
+.alertTextP {
+  text-align: center;
+  color: #ea1601;
+  display: none;
+}
+
 #submit {
   background-color: #d3d3d3;
   color: #000;
@@ -29,6 +41,7 @@ section {
   color: red;
   font-size: 10px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 769px) {
