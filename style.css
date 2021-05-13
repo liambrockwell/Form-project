@@ -28,6 +28,12 @@ section {
   display: none;
 }
 
+.alertTextBoth {
+  text-align: center;
+  color: #ea1601;
+  display: none;
+}
+
 #submit {
   background-color: #d3d3d3;
   color: #000;

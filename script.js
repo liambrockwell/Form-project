@@ -29,14 +29,18 @@ const createAlertP = () =>{
     alertTextP.style.display = 'block';
  }
 
+ const createAlertBoth = () =>{
+     const alertTextBoth = document.querySelector('.alertTextBoth');
+     alertTextBoth.style.display = 'block';
+ }
+
  const formVal = (e) => {
    const email = document.forms['myForm']['emailAd']
    const password = document.forms['myForm']['passVal']
 
    if (email.value !== user.email && password.value !== user.password) {
        e.preventDefault();
-       createAlertP();
-       createAlertEm();
+       createAlertBoth();
    } 
    else if(email.value !== user.email && password.value === user.password){
        e.preventDefault();
