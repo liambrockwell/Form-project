@@ -35,15 +35,16 @@ const createAlertP = () =>{
 
    if (email.value !== user.email && password.value !== user.password) {
        e.preventDefault();
-      
+       createAlertP();
+       createAlertEm();
    } 
    else if(email.value !== user.email && password.value === user.password){
        e.preventDefault();
        createAlertEm();
    }
    else if(email.value === user.email && password.value !== user.password){
-    e.preventDefault();
-    createAlertP();
+       e.preventDefault();
+       createAlertP();
    }
  }
  document.querySelector('form').addEventListener('submit', formVal)
