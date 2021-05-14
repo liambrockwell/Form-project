@@ -74,8 +74,7 @@ document.querySelector('#backBtn').addEventListener('click', flipCard);
 
 // register form
 
-// creating a func that recognises if there are any numbers or symbols in input
-
+// creating a func that recognises if there are any numbers or symbols in name input.
 const char = (name) => {
     const charReq = /[A-z]/;
     name.addEventListener("keypress", event => {
@@ -94,6 +93,23 @@ const lastNameFunc = () => {
   char(lastName);
 };
 
-//name = this. add event 
 document.querySelector('#firstName').addEventListener('keydown',firstNameFunc);
 document.querySelector('#lastName').addEventListener('keydown',lastNameFunc);
+
+// a way to recognise created password and confirm it
+const passVal = () => { 
+    const createPass = document.querySelector('#createPass').value;
+    const confirmPass = document.querySelector('#confirmPass').value;
+    const errorText = document.querySelector('.help')
+    //adding error text upon incorrect password
+    if(createPass != confirmPass){
+        errorText.classList.add('add');
+    } else{
+        errorText.classList.remove('add');
+    }
+
+     };
+
+document.querySelector('#register').addEventListener('submit', passVal);
+
+

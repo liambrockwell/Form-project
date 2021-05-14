@@ -74,44 +74,52 @@
                                 <input type="password" class="input is-rounded" name="passVal" placeholder="Enter password">
                             </div>
                             <div class="field is-flex is-justify-content-center">
-                                <input type="submit" class="button is-rounded is-fullwidth" value="sign-in" id="submit">
+                                <input type="submit" class="button is-rounded is-fullwidth mt-4" value="sign-in" id="submit">
                             </div>
                           </form>
-                          <footer class="card-footer mt-3 ">
-                            <button class="button  is-fullwidth is-rounded mt-3" id="registerBtn">register</button>
+                          <div class="field">
+                            <button class="button  is-fullwidth is-rounded mt-4" id="registerBtn">register</button>
+                          </div>
+                          <footer class="card-footer">
+                            <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo molestias laudantium ipsa eum, autem sapiente iste quidem maxime odio possimus delectus. Fugiat, repellat odit officiis laboriosam iure placeat dicta modi?</blockquote>
                           </footer>
+                        </div>
                     </div>
-                </div>
-                <div class="card-back">
-                    <div class="card-content">
+                    <div class="card-back">
+                      <div class="card-content">
                         <button class="button" id="backBtn">
                             <span class="icon">
                                 <ion-icon name="arrow-back-outline"></ion-icon>
                             </span>
                         </button>
-                        <p class="title">
+                        <p class="title mb-5" id="registerTitle">
                             register
                         </p>
-                        <form action="#" id="register" name="registerForm" class="mt-6">
+                        <form action="#" id="register" name="registerForm">
                             <div class="field is-grouped">
-                                <input type="text" class="input mr-2 is-rounded" placeholder="First name" id="firstName" >
-                                <input type="text" class="input is-rounded" placeholder="Last name" id="lastName">
+                                
+                                <input type="text" class="input mr-2 is-rounded mt-2" placeholder="First name" id="firstName" >
+                                <input type="text" class="input is-rounded mt-2" placeholder="Last name" id="lastName">
                             </div>
                             <div class="field">
-                                <input type="email" class="input is-rounded mt-3" placeholder="Enter email">
+                                <input type="email" class="input is-rounded mt-2 " placeholder="Enter email">
                             </div>
                             <div class="field">
-                                <input type="password" class="input is-rounded mt-3" placeholder="Create password">
+                                <input type="password" class="input is-rounded mt-2" placeholder="Create password" id="createPass" minlength="4">
                             </div>
                             <div class="field">
-                                <label class="checkbox mt-3">
+                                <input type="password" class="input is-rounded mt-1" placeholder="confirm password" id="confirmPass" minlength="4">
+                                <p class="help ml-2">password does not match!</p>
+                            </div>
+                            <div class="field">
+                                <label class="checkbox">
                                     <input type="checkbox">
                                     I agree to the <a href="#">terms and conditions</a>
                                 </label>
                             </div>
-                            <footer class="card-footer">
-                                <input type="submit" class="button is-rounded is-fullwidth mt-4">
-                            </footer>
+                            <div class="field mt-2">
+                                <input type="submit" class="button is-rounded is-fullwidth is-medium" id="submitReg">
+                            </div>
                         </form>
                     </div>
                 </div>  
