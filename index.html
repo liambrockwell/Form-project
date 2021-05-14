@@ -34,11 +34,12 @@
             </div>
         </div>
     </nav>
-    <section class="section is-medium ">
-        <div class="columns is-mobile">
+    
+        <div class="columns is-mobile mt-6">
             <div class="column is-hidden-mobile"></div>
-            <div class="column is-half is-three-quarters-mobile" id="card">
+            <div class="column is-half is-fullwidth-mobile" id="cardColumn">
                 <div class="card">
+                  <div class="card-front"> 
                     <header class="card-header">
                         <p class="card-header-title">
                             Already registerd
@@ -76,16 +77,24 @@
                             <div class="field is-flex is-justify-content-center">
                                 <input type="submit" class="button is-rounded is-fullwidth" value="sign-in" id="submit">
                             </div>
-                            <footer class="card-footer ">
-                                <button class="button  is-fullwidth is-rounded mt-3">register</button>
-                            </footer>
                         </form>
+                        <footer class="card-footer mt-3 ">
+                            <button class="button  is-fullwidth is-rounded mt-3" id="registerBtn">register</button>
+                        </footer>
                     </div>
+                  </div>
+                  <div class="card-back">
+                      <div class="card-content">
+                          <p class="title">
+                              register
+                          </p>
+                      </div>
+                  </div>  
                 </div>
             </div>
            <div class="column is-hidden-mobile"></div>
         </div>
-    </section>
+    
     <script src="script.js"></script>
 </body>
 </html>

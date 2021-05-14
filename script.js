@@ -34,6 +34,11 @@ const createAlertP = () =>{
      alertTextBoth.style.display = 'block';
  }
 
+ //refresh page after incorrect submit to remove warning text
+ const refresh = () => { document.querySelector('form').addEventListener('click', function(){
+    window.location.reload();
+ }) };
+
  const formVal = (e) => {
    const email = document.forms['myForm']['emailAd']
    const password = document.forms['myForm']['passVal']
@@ -41,15 +46,26 @@ const createAlertP = () =>{
    if (email.value !== user.email && password.value !== user.password) {
        e.preventDefault();
        createAlertBoth();
+       refresh()
    } 
    else if(email.value !== user.email && password.value === user.password){
        e.preventDefault();
        createAlertEm();
+       refresh()
    }
    else if(email.value === user.email && password.value !== user.password){
        e.preventDefault();
        createAlertP();
+       refresh()
    }
  }
  document.querySelector('form').addEventListener('submit', formVal)
-//user.myFunc()
+
+ // flip card to make register form appear
+ const card = document.querySelector('.card');
+ 
+ const flipCard = () => {
+     card.classList.toggle("flip");
+ }
+
+document.querySelector('#registerBtn').addEventListener("click", flipCard);
