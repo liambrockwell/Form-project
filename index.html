@@ -35,65 +35,90 @@
         </div>
     </nav>
     
-        <div class="columns is-mobile mt-6">
-            <div class="column is-hidden-mobile"></div>
+    <div class="columns is-mobile mt-6">
+        <div class="column is-hidden-mobile"></div>
             <div class="column is-half is-fullwidth-mobile" id="cardColumn">
                 <div class="card">
-                  <div class="card-front"> 
-                    <header class="card-header">
-                        <p class="card-header-title">
-                            Already registerd
-                         </p>
-                        <span class="icon icon is-large">
-                            <ion-icon name="balloon-outline"></ion-icon>
-                        </span>  
-                    </header>
-                    <div class="card-content">
-                        <p class="title">
+                    <div class="card-front"> 
+                        <header class="card-header">
+                            <p class="card-header-title">
+                            Sign-in
+                            </p>
+                            <span class="icon icon is-large">
+                               <ion-icon name="balloon-outline"></ion-icon>
+                            </span>  
+                        </header>
+                        <div class="card-content">
+                          <p class="title">
                             Already part of the club?
-                        </p>
-                        <p class="subtitle">
+                          </p>
+                          <p class="subtitle">
                             sign in to explore
-                        </p>
-                        <p class="alertTextEm">
+                          </p>
+                          <p class="alertTextEm">
                             Email was not recognised!
-                        </p>
-                        <p class="alertTextP">
+                          </p>
+                          <p class="alertTextP">
                             password was not recognised!
-                        </p>
-                        <p class="alertTextBoth">
+                          </p>
+                          <p class="alertTextBoth">
                            Email and password was not recognised!
-                        </p>
-                        
-                        <form id="signIn" name="myForm" action="/home.html">
+                          </p>
+                          <form id="signIn" name="signInForm" action="/home.html">
                             <div class="field">
                                 <label class="label">Enter email</label>
-                                <input class="input is-rounded is is-small" type="email" placeholder="Enter email" name="emailAd">
+                                <input class="input is-rounded is" type="email" placeholder="Enter email" name="emailAd">
                             </div> 
                             <div class="field">
                                 <label class="label">Enter password</label>
-                                <input type="password" class="input is-rounded is-small" name="passVal" placeholder="Enter password">
+                                <input type="password" class="input is-rounded" name="passVal" placeholder="Enter password">
                             </div>
                             <div class="field is-flex is-justify-content-center">
                                 <input type="submit" class="button is-rounded is-fullwidth" value="sign-in" id="submit">
                             </div>
-                        </form>
-                        <footer class="card-footer mt-3 ">
+                          </form>
+                          <footer class="card-footer mt-3 ">
                             <button class="button  is-fullwidth is-rounded mt-3" id="registerBtn">register</button>
-                        </footer>
+                          </footer>
                     </div>
-                  </div>
-                  <div class="card-back">
-                      <div class="card-content">
-                          <p class="title">
-                              register
-                          </p>
-                      </div>
-                  </div>  
                 </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <button class="button" id="backBtn">
+                            <span class="icon">
+                                <ion-icon name="arrow-back-outline"></ion-icon>
+                            </span>
+                        </button>
+                        <p class="title">
+                            register
+                        </p>
+                        <form action="#" id="register" name="register" class="mt-6">
+                            <div class="field is-grouped">
+                                <input type="text" class="input mr-2 is-rounded" placeholder="First name">
+                                <input type="text" class="input is-rounded" placeholder="Last name">
+                            </div>
+                            <div class="field">
+                                <input type="email" class="input is-rounded mt-3" placeholder="Enter email">
+                            </div>
+                            <div class="field">
+                                <input type="password" class="input is-rounded mt-3" placeholder="Create password">
+                            </div>
+                            <div class="field">
+                                <label class="checkbox mt-3">
+                                    <input type="checkbox">
+                                    I agree to the <a href="#">terms and conditions</a>
+                                </label>
+                            </div>
+                            <footer class="card-footer">
+                                <input type="submit" class="button is-rounded is-fullwidth mt-4">
+                            </footer>
+                        </form>
+                    </div>
+                </div>  
             </div>
-           <div class="column is-hidden-mobile"></div>
         </div>
+        <div class="column is-hidden-mobile"></div>
+    </div>
     
     <script src="script.js"></script>
 </body>
