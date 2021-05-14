@@ -1,4 +1,4 @@
-
+// nav functionality
 const nav =() => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('#'+burger.dataset.target);
@@ -9,14 +9,14 @@ const nav =() => {
     });
 };
 nav()
-
+//fake user data for tests
  user = {
     email:'liam@23com',
     password:'liam',
-    myFunc(email=user.email,password=user.password) {
-       
-    }
+    
 }
+//1st form /log in functionality
+
 // display text when email = wrong
 const createAlertEm = () =>{
    const alertTextEm = document.querySelector('.alertTextEm');
@@ -27,12 +27,12 @@ const createAlertEm = () =>{
 const createAlertP = () =>{
     const alertTextP = document.querySelector('.alertTextP');
     alertTextP.style.display = 'block';
- }
+ };
 
  const createAlertBoth = () =>{
      const alertTextBoth = document.querySelector('.alertTextBoth');
      alertTextBoth.style.display = 'block';
- }
+ };
 
  //refresh page after incorrect submit to remove warning text
  const refresh = () => { document.querySelector('#signIn').addEventListener('click', function(){
@@ -40,34 +40,60 @@ const createAlertP = () =>{
  }) };
 
  const formVal = (e) => {
-   const email = document.forms['signInForm']['emailAd']
-   const password = document.forms['signInForm']['passVal']
+   const email = document.forms['signInForm']['emailAd'];
+   const password = document.forms['signInForm']['passVal'];
 
    if (email.value !== user.email && password.value !== user.password) {
        e.preventDefault();
        createAlertBoth();
-       refresh()
+       refresh();
    } 
    else if(email.value !== user.email && password.value === user.password){
        e.preventDefault();
        createAlertEm();
-       refresh()
+       refresh();
    }
    else if(email.value === user.email && password.value !== user.password){
        e.preventDefault();
        createAlertP();
-       refresh()
-   }
- }
- document.querySelector('#signIn').addEventListener('submit', formVal)
+       refresh();
+   };
+ };
+ document.querySelector('#signIn').addEventListener('submit', formVal);
 
- // flip card to make register form appear
+ // flip card functionality 
  const card = document.querySelector('.card');
  
  const flipCard = () => {
      card.classList.toggle("flip");
- }
+   
+ };
 
 document.querySelector('#registerBtn').addEventListener("click", flipCard);
-document.querySelector('#backBtn').addEventListener('click', flipCard)
+document.querySelector('#backBtn').addEventListener('click', flipCard);
+
 // register form
+
+// creating a func that recognises if there are any numbers or symbols in input
+
+const char = (name) => {
+    const charReq = /[A-z]/;
+    name.addEventListener("keypress", event => {
+        if(!charReq.test(event.key)) {
+            event.preventDefault();
+        };
+    });
+};
+
+const firstNameFunc = () => {
+  const firstName = document.querySelector('#firstName');
+  char(firstName);
+};
+const lastNameFunc = () => {
+  const lastName = document.querySelector('#lastName');
+  char(lastName);
+};
+
+//name = this. add event 
+document.querySelector('#firstName').addEventListener('keydown',firstNameFunc);
+document.querySelector('#lastName').addEventListener('keydown',lastNameFunc);
