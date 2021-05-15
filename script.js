@@ -91,25 +91,36 @@ const firstNameFunc = () => {
 const lastNameFunc = () => {
   const lastName = document.querySelector('#lastName');
   char(lastName);
+  
 };
+
+
 
 document.querySelector('#firstName').addEventListener('keydown',firstNameFunc);
 document.querySelector('#lastName').addEventListener('keydown',lastNameFunc);
 
 // a way to recognise created password and confirm it
-const passVal = () => { 
+const passVal = (e) => { 
     const createPass = document.querySelector('#createPass').value;
     const confirmPass = document.querySelector('#confirmPass').value;
     const errorText = document.querySelector('.help')
     //adding error text upon incorrect password
     if(createPass != confirmPass){
         errorText.classList.add('add');
-    } else{
+        e.preventDefault()
+    } else if(createPass ==''){
+       e.preventDefault()
+    } else if(confirmPass ==''){
+       e.preventDefault()
+    }
+     else{
         errorText.classList.remove('add');
     }
 
      };
 
 document.querySelector('#register').addEventListener('submit', passVal);
+
+
 
 

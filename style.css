@@ -3,6 +3,9 @@
   width: 100%;
   background-color: #f1faee;
 }
+.container {
+  width: 115%;
+}
 
 .columns {
   justify-content: center;
