@@ -11,8 +11,8 @@ const nav =() => {
 nav()
 //fake user data for tests
  user = {
-    email:'liam@23com',
-    password:'liam',
+    email: localStorage.getItem('email'),
+    password: localStorage.getItem('password'),
     
 }
 //1st form /log in functionality
@@ -108,18 +108,31 @@ const passVal = (e) => {
     if(createPass != confirmPass){
         errorText.classList.add('add');
         e.preventDefault()
-    } else if(createPass ==''){
-       e.preventDefault()
-    } else if(confirmPass ==''){
-       e.preventDefault()
-    }
-     else{
+    }else{
         errorText.classList.remove('add');
     }
 
      };
 
 document.querySelector('#register').addEventListener('submit', passVal);
+
+// store register details in local storage
+window.onload = function () {
+   if(localStorage){
+       document.querySelector('#register').addEventListener('submit',function(){
+           let firstName = document.querySelector('#firstName').value;
+           let lastName = document.querySelector('#lastName').value;
+           let email = document.querySelector('#regEmail').value;
+           let password = document.querySelector('#createPass').value;
+
+           localStorage.setItem('firstName', firstName );
+           localStorage.setItem('lastName', lastName );
+           localStorage.setItem('email', email );
+           localStorage.setItem('password', password );
+
+       });
+   } 
+}
 
 
 
