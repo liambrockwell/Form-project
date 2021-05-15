@@ -2,9 +2,19 @@
   height: 100vh;
   width: 100%;
   background-color: #f1faee;
+  background: url(/forest.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 .container {
-  width: 115%;
+  width: 100vh;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
 }
 
 .columns {
@@ -46,7 +56,7 @@
   display: none;
 }
 
-#submit {
+#submitBtn {
   background-color: #d3d3d3;
   color: #000;
 }
@@ -74,7 +84,7 @@
 }
 
 .card {
-  height: 100%;
+  height: 95%;
   -webkit-transition: transform 0.6s;
   transition: transform 0.6s;
   transform-style: preserve-3d;
