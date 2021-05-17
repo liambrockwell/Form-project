@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100%;
   background-color: #f1faee;
-  background: url(/forest.jpg) no-repeat center center fixed;
+  background: url(forest.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,11 +10,22 @@
 }
 
 .container {
-  width: 100vh;
+  width: 101vh;
 }
 
 p {
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .columns {
